@@ -1,0 +1,20 @@
+<script>
+  function vervangen(doe,woord,nieuwewoord) {
+    while(tekst.indexOf(woord) != -1) {
+      deel1 = tekst.substr(0, tekst.indexOf(woord)) + nieuwewoord;
+      deel2 = tekst.substring(tekst.indexOf(woord)+ woord.length, tekst.length);
+      tekst = deel1 + deel2;
+    }
+    document.write(tekst);
+  }
+  tekst = "<br><br>Dit document is een lang document maar ook een simpel document";
+</script>
+
+  <form name="form">
+    <input type="text" name="zoek" />
+    <input type="text" name="vervang" />
+    <input type="button" name="button" value="vervang" onclick="vervangen(tekst,document.form.zoek.value, document.form.vervang.value);" />
+  <form>
+<script>
+  document.write(tekst);
+</script>
